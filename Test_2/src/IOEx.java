@@ -16,7 +16,7 @@ public class IOEx {
 		fos.write('b');
 		String str = "가나다あいうえお";
 		// 문자열 -> 바이트배열 전환
-		byte[] r = str.getBytes();
+		byte[] r = str.getBytes("utf-8");
 		
 		bos.write(r); // 버퍼에 쌓기
 		bos.flush(); // 버퍼에 쌓인 거 밀어내기
@@ -29,7 +29,7 @@ public class IOEx {
 		fis.read(temp);	// 1024바이트 읽기 -> temp에 저장
 		
 		// 바이트배열 -> 문자열 변환
-		String msg = new String(temp);
+		String msg = new String(temp, "utf-8");
 		
 		// 빈공백 제거 후 출력
 		System.out.print(msg.trim());

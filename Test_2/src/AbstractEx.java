@@ -29,7 +29,7 @@ class Pig extends Animal {
 	}
 }
 
-public class AbsractEx {
+public class AbstractEx {
 	public static void main(String[] args) {
 		// Animal 클래스에서 상속 받은 메소드 사용 가능
 		Cat c = new Cat();

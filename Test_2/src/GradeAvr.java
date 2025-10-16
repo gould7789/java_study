@@ -1,6 +1,4 @@
-
-// OOP 출발점
-// 1. 모든 멤버변수 접근제한자 private 선언
+import java.util.ArrayList;
 
 class MyPerson {
 	int age;
@@ -47,6 +45,16 @@ public class GradeAvr {
 		m3.average();
 		m3.score_print();
 		
+		// ArrayList : 객체를 여러개 저장할 수 있는 공간
+		ArrayList mTotal = new ArrayList();
+		mTotal.add(m1);	// mTotal에 m1 객체 저장
+		mTotal.add(m2);
+		mTotal.add(m3);
 		
+		int result = 0;
+		for (int i=0; i<3; i++) {
+			MyPerson t = (MyPerson)mTotal.get(i);	// ArrayList에서 값 가져올 때는 순서(인덱스)를 기준으로 가져옴
+			result += t.score1 + t.score2 + t.score3;
+		}
 	}	
 }

@@ -30,12 +30,24 @@ public class Number {
 			}
 		}
 		System.out.println();
+		System.out.println("=====================================");
 	}
+	
+	// 사용자가 지정한 숫자의 구구단을 출력
+	public void printMulltiplicationTable(int n) {
+		System.out.println("지정한 숫자의 구구단");
+		for (int i = 1; i < 10; i++) {
+			System.out.printf("%d x %d = %d", n, i, n * i).println();
+		}
+	}
+	
+	
 	
 	// 메인메소드에서 출력
 	public static void main(String[] args) {
 		Number n = new Number();
 		n.printNumbers(10);
 		n.printSquaresOfNumbers(5);
+		n.printMulltiplicationTable(5);
 	}
 }
